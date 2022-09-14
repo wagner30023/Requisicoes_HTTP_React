@@ -9,13 +9,13 @@ function App() {
 
   // 1 - resgatando dados da API
   useEffect(() => {
-    async function  myAPI() {
+    async function  fetchData() {
       let res = await fetch(url);
       const data = await res.json();
       setProducts(data);
     }
 
-    myAPI();
+    fetchData();
   },[]);
 
   console.log(products);
